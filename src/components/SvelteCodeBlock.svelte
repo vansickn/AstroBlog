@@ -13,7 +13,7 @@
 
 </script>
 
-<div class="container flex flex-col bg-[#282a36] rounded-xl shadow-xl selection:bg-white selection:text-fuchsia-900">
+<div class="container flex flex-col bg-[#282a36] rounded-xl shadow-xl selection:bg-white selection:text-fuchsia-900 not-prose">
   
   <div class="relative flex flex-row bg-[#282a36] p-2 rounded-xl items-center justify-end gap-5">
 
