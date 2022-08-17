@@ -30,12 +30,16 @@ const {
   				border-top: 1px solid #DDD;
 				margin: 1rem 0;
 			}
+			h2 {
+				font-size: 2em;
+				color: aqua;
+			}
 		</style>
 	</head>
 
 	<body>
 		<Header />
-		<main>
+		<main >
 			<article>
 				{heroImage && (
 					<img
@@ -49,7 +53,7 @@ const {
 				{pubDate && <time>{pubDate}</time>}
 				{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
 				<hr/>
-				<slot />
+				<slot class="prose" />
 			</article>
 		</main>
 		<Footer />

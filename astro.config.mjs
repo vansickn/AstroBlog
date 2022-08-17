@@ -2,6 +2,7 @@ import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
+import remarkGfm from "remark-gfm";
 
 import svelte from "@astrojs/svelte";
 
@@ -17,9 +18,16 @@ export default defineConfig({
       // https://github.com/shikijs/shiki/blob/main/docs/languages.md
       langs: [],
       // Enable word wrap to prevent horizontal scrolling
-      wrap: true
-    }
+      wrap: true,
+    },
   },
   site: "https://example.com",
-  integrations: [mdx(), sitemap(), tailwind(), svelte()]
+  integrations: [
+    mdx({
+      remarkPlugins: [[remarkGfm]],
+    }),
+    sitemap(),
+    tailwind(),
+    svelte(),
+  ],
 });

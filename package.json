@@ -19,6 +19,8 @@
     "svelte": "^3.49.0"
   },
   "dependencies": {
-    "canvas-confetti": "^1.5.1"
+    "canvas-confetti": "^1.5.1",
+    "remark-autolink-headings": "^7.0.1",
+    "remark-gfm": "^3.0.1"
   }
 }
