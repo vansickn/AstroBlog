@@ -37,10 +37,16 @@ const {
 		</style>
 	</head>
 
-	<body>
+	<body class="bg-gray-900">
 		<Header />
-		<main >
-			<article>
+		<main>
+			<article class="
+			prose
+			prose-invert
+			prose-code:before:content-none prose-code:after:content-none 
+			prose-img:rounded-xl
+			prose-img:shadow-2xl
+			">
 				{heroImage && (
 					<img
 						width={720}
@@ -53,7 +59,7 @@ const {
 				{pubDate && <time>{pubDate}</time>}
 				{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
 				<hr/>
-				<slot class="prose" />
+				<slot />
 			</article>
 		</main>
 		<Footer />
