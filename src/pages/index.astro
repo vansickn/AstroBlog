@@ -78,17 +78,26 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 		animation-iteration-count: infinite;
 		animation-delay: 0s;
 	}
+	#innerOrbitGroup:hover {
+		animation-play-state: paused;
+	}
 	#middleOrbitGroup {
 		animation: rotateOrbit 40s;
 		animation-timing-function: linear;
 		animation-iteration-count: infinite;
 		animation-delay: 0s;
 	}
+	#middleOrbitGroup:hover {
+		animation-play-state: paused;
+	}
 	#outerOrbitGroup {
 		animation: rotateOrbit 60s;
 		animation-timing-function: linear;
 		animation-iteration-count: infinite;
 		animation-delay: 0s;
+	}
+	#outerOrbitGroup:hover {
+		animation-play-state: paused;
 	}
 
 	#earth {
