@@ -21,28 +21,20 @@ const {
 <html>
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			hr {
-  				border-top: 1px solid #DDD;
-				margin: 1rem 0;
-			}
-			h2 {
-				font-size: 2em;
-				color: aqua;
-			}
-		</style>
 	</head>
 
-	<body class="bg-gray-900">
+	<body class="
+		bg-gradient-to-b
+		from-gray-900
+		to-gray-600
+		">
 		<Header />
 		<main>
 			<article class="
 			prose
 			prose-invert
+			prose-sm
+			lg:prose-lg
 			prose-code:before:content-none prose-code:after:content-none 
 			prose-img:rounded-xl
 			prose-img:shadow-2xl

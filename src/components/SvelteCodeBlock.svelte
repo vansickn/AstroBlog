@@ -25,7 +25,7 @@
     </svg>
 
   </div>
-  <div class="rounded-xl p-2 bg-[#282a36] shadow-xl">
+  <div class="rounded-xl p-2 bg-[#282a36] shadow-xl not-prose">
       <slot />
   </div>
 
