@@ -46,7 +46,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 					">
 					Hey! I'm Noah
 					</h1>
-					<p id="subtext1" class="text-center text-lg md:text-xl"> Software Engineer in NY, NY</p>
+					<p id="subtext1" class="text-center text-lg md:text-xl m-0"> Click a Planet to Explore 👉🌎</p>
+					<p id="subtext2" class="text-center text-xs md:text-sm m-0"> (or scroll down) </p>
 				</div>
 
 				<p>
@@ -85,14 +86,51 @@ Vestibulum tellus nibh, eleifend id faucibus at, ultricies vitae nisi. Sed et ni
 <style>
 	#heroText {
 		font-family: FuturaBold;
+		animation: slideFromTopFade;
+		animation-duration: 800ms;
+		animation-timing-function: ease-in-out;
 	}
 	#subtext1 {
 		font-family: FuturaBold;
+		animation: opacityChange;
+		animation-duration: 800ms;
+		animation-timing-function: ease-in-out;
+		/* margin-right: 300px; */
 	}
+	#subtext2 {
+		font-family: FuturaBold;
+		animation: opacityChange;
+		animation-duration: 1500ms;
+		animation-timing-function: ease-in;
+		/* margin-right: 300px; */
+	}
+	/* #subtext2 {
+		font-family: FuturaBold;
+		margin-left: 300px;
+	} */
 
 	@font-face {
 		font-family: FuturaBold;
 		src: url('FuturaHeavyfont.ttf');
+	}
+
+	@keyframes slideFromTopFade {
+		0% {
+			transform: translateY(-50px);
+			opacity: 0%;
+		}
+		100% {
+			transform: translateY(0);
+			opacity: 100%;
+		}
+	}
+	@keyframes opacityChange {
+		0% {
+			opacity: 0%;
+		}
+		100% {
+			opacity: 100%;
+		}
 	}
 
 </style>
