@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import OrbitLinks from "../components/OrbitLinks.svelte";
 import Stars from "../components/Stars.svelte";
+import About from "../components/aboutMeAnalysis.svelte";
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 ---
 
@@ -29,7 +30,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 				
 				<OrbitLinks client:load></OrbitLinks>
 					
-				<div class="container flex flex-col">
+				<div class="container flex flex-col mb-24">
 					<h1 id="heroText" class="
 					select-none
 					text-center
@@ -50,40 +51,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 					<p id="subtext2" class="text-center text-xs md:text-sm m-0"> (or scroll down) </p>
 				</div>
 
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec molestie nunc. Cras non porta eros. Sed blandit est et orci pretium, ut mollis diam ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus tempor arcu nisi, ut convallis neque ullamcorper ut. Nam auctor a augue rhoncus molestie. Nam vehicula tempor massa, id ullamcorper elit eleifend et. Quisque mollis in tellus sit amet molestie. Vestibulum condimentum lobortis condimentum. Nullam commodo augue sit amet maximus posuere. Suspendisse quis erat et nulla pharetra euismod quis eget leo. Maecenas tristique scelerisque ultricies. Nam egestas augue non justo iaculis venenatis. Etiam sodales lectus ex, ac porttitor urna tincidunt eu.
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas at dolor quis nunc faucibus fermentum. Suspendisse at porta erat, vel commodo quam. Vivamus gravida diam at turpis laoreet porttitor. Vivamus et felis at eros porta congue eget non diam. Praesent elit ex, cursus sit amet faucibus in, ultricies in velit. Phasellus laoreet nibh efficitur mauris scelerisque, id commodo magna rutrum. Integer ac dictum risus. Phasellus sit amet fringilla justo, sit amet maximus odio. Sed quis tristique eros.
-
-Nullam aliquet porta varius. Etiam venenatis posuere posuere. Proin finibus est eget libero facilisis, posuere pulvinar eros scelerisque. Fusce posuere nisi at justo lacinia, et gravida mi mattis. Aenean congue quam id lacus porta, a porttitor nulla posuere. Morbi viverra augue a mattis suscipit. Mauris diam nunc, tincidunt ac consectetur id, ultricies nec diam. Nam commodo eget lorem at porttitor.
-
-Suspendisse potenti. Aliquam sed viverra neque. Suspendisse sed laoreet massa, vitae porttitor turpis. Quisque ipsum arcu, eleifend vehicula tempus non, sagittis in felis. Duis maximus sit amet dui vitae scelerisque. Sed facilisis dolor non vulputate fringilla. Nunc non tempor metus. Praesent placerat faucibus sodales.
-
-Vestibulum tellus nibh, eleifend id faucibus at, ultricies vitae nisi. Sed et nisi bibendum mauris condimentum faucibus id a dolor. Sed eget elementum tellus, a auctor metus. Maecenas elit nunc, aliquam non tortor id, consequat sodales magna. Vivamus a placerat justo, id commodo quam. Mauris id nibh eget urna ullamcorper luctus at et est. Phasellus fermentum nisi ac lacus ultricies, a viverra elit feugiat. Ut vel dapibus turpis, in vulputate nibh. Vestibulum mattis ultricies cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec molestie nunc. Cras non porta eros. Sed blandit est et orci pretium, ut mollis diam ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus tempor arcu nisi, ut convallis neque ullamcorper ut. Nam auctor a augue rhoncus molestie. Nam vehicula tempor massa, id ullamcorper elit eleifend et. Quisque mollis in tellus sit amet molestie. Vestibulum condimentum lobortis condimentum. Nullam commodo augue sit amet maximus posuere. Suspendisse quis erat et nulla pharetra euismod quis eget leo. Maecenas tristique scelerisque ultricies. Nam egestas augue non justo iaculis venenatis. Etiam sodales lectus ex, ac porttitor urna tincidunt eu.
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas at dolor quis nunc faucibus fermentum. Suspendisse at porta erat, vel commodo quam. Vivamus gravida diam at turpis laoreet porttitor. Vivamus et felis at eros porta congue eget non diam. Praesent elit ex, cursus sit amet faucibus in, ultricies in velit. Phasellus laoreet nibh efficitur mauris scelerisque, id commodo magna rutrum. Integer ac dictum risus. Phasellus sit amet fringilla justo, sit amet maximus odio. Sed quis tristique eros.
-
-Nullam aliquet porta varius. Etiam venenatis posuere posuere. Proin finibus est eget libero facilisis, posuere pulvinar eros scelerisque. Fusce posuere nisi at justo lacinia, et gravida mi mattis. Aenean congue quam id lacus porta, a porttitor nulla posuere. Morbi viverra augue a mattis suscipit. Mauris diam nunc, tincidunt ac consectetur id, ultricies nec diam. Nam commodo eget lorem at porttitor.
-
-Suspendisse potenti. Aliquam sed viverra neque. Suspendisse sed laoreet massa, vitae porttitor turpis. Quisque ipsum arcu, eleifend vehicula tempus non, sagittis in felis. Duis maximus sit amet dui vitae scelerisque. Sed facilisis dolor non vulputate fringilla. Nunc non tempor metus. Praesent placerat faucibus sodales.
-
-Vestibulum tellus nibh, eleifend id faucibus at, ultricies vitae nisi. Sed et nisi bibendum mauris condimentum faucibus id a dolor. Sed eget elementum tellus, a auctor metus. Maecenas elit nunc, aliquam non tortor id, consequat sodales magna. Vivamus a placerat justo, id commodo quam. Mauris id nibh eget urna ullamcorper luctus at et est. Phasellus fermentum nisi ac lacus ultricies, a viverra elit feugiat. Ut vel dapibus turpis, in vulputate nibh. Vestibulum mattis ultricies cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-
-				</p>
 				
 			</div>
 
+			<About client:visible></About>
+
 			
 		</main>
+		<!-- todo make footer the moon or a planet or some shit -->
 		<Footer />
 	</body>
 </html>
 
 <style>
+	.svg {
+  width: 1.5em;
+  vertical-align: middle
+}
 	#heroText {
 		font-family: FuturaBold;
 		animation: slideFromTopFade;
@@ -104,6 +88,27 @@ Vestibulum tellus nibh, eleifend id faucibus at, ultricies vitae nisi. Sed et ni
 		animation-timing-function: ease-in;
 		/* margin-right: 300px; */
 	}
+	#aboutMePlanet {
+		animation: floating;
+		animation-duration: 6s;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+	}
+	.planetCircle {
+		box-shadow: inset 0px -20px 50px 10px #00ffff80,
+		0px 0px 30px 6px #00ffff70;
+	}
+
+
+@keyframes rotate {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 530px 0;
+	}
+}
 	/* #subtext2 {
 		font-family: FuturaBold;
 		margin-left: 300px;
@@ -131,6 +136,12 @@ Vestibulum tellus nibh, eleifend id faucibus at, ultricies vitae nisi. Sed et ni
 		100% {
 			opacity: 100%;
 		}
+	}
+
+	@keyframes floating {
+    0% { transform: translate(0,  -2px); }
+    50%  { transform: translate(0, 4px); }
+    100%   { transform: translate(0, -2px); }   
 	}
 
 </style>
