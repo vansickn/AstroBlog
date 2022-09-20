@@ -20,8 +20,10 @@
     "svelte": "^3.49.0"
   },
   "dependencies": {
+    "@rive-app/canvas": "^1.0.84",
     "canvas-confetti": "^1.5.1",
     "remark-autolink-headings": "^7.0.1",
-    "remark-gfm": "^3.0.1"
+    "remark-gfm": "^3.0.1",
+    "rive-js": "^0.7.33"
   }
 }

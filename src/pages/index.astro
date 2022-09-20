@@ -5,7 +5,9 @@ import Footer from '../components/Footer.astro';
 import OrbitLinks from "../components/OrbitLinks.svelte";
 import Stars from "../components/Stars.svelte";
 import About from "../components/aboutMeAnalysis.svelte";
+
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+
 ---
 
 <!DOCTYPE html>
@@ -54,7 +56,18 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 				
 			</div>
 
+			<!-- <canvas id="canvas" class="3/4"></canvas>
+			<script>
+				new Rive({
+					src: "aboutMeAnimation.riv",
+					// Or the path to a local Rive asset
+					// src: './example.riv',
+					canvas: document.getElementById("canvas"),
+					autoplay: true
+				});
+			</script> -->
 			<About client:visible></About>
+			
 
 			
 		</main>
