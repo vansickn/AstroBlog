@@ -32,7 +32,7 @@
 	which is a radial gradient, and then the css targets the earth components rather than the radial gradient from yellow to transparency
 -->
 
-<div class="md:w-6/12 w-full centered">
+<div class="md:w-5/12 w-full centered">
 	<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<g id="solarSystem">
 	<g id="earthDisplayContents">

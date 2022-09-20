@@ -26,7 +26,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
 		<Stars client:visible></Stars>
 		<!-- <Header title={SITE_TITLE} /> -->
-		<main class="w-full min-h-screen">
+		<main class="w-full min-h-screen justify-items-center justify-center">
 			<!-- class="w-full min-h-screen" -->
 			<div class="grid grid-cols-1 items-center justify-items-center">
 				
@@ -55,18 +55,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
 				
 			</div>
-
-			<!-- <canvas id="canvas" class="3/4"></canvas>
-			<script>
-				new Rive({
-					src: "aboutMeAnimation.riv",
-					// Or the path to a local Rive asset
-					// src: './example.riv',
-					canvas: document.getElementById("canvas"),
-					autoplay: true
-				});
-			</script> -->
-			<About client:visible></About>
+			
+			<div class="w-full h-auto container flex flex-col justify-items-center">
+				<About client:visible></About>
+			</div>
+			<!-- <div class="container flex flex-col items-center w-full">
+			</div> -->
 			
 
 			

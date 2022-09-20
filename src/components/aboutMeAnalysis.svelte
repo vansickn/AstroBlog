@@ -3,27 +3,27 @@
     import { onMount } from 'svelte';
     // import aboutMeAnimation from '.../public/portfolio_animations.riv';
 
-    let canvas,rive;
+    let canvas;
 
-    let canvasWidth = 1500;
-    let canvasHeight = 1000;
+    let canvasWidth = 4000;
+    let canvasHeight = 2000;
 
     onMount(()=>{
-        new Rive({
+        const r = new Rive({
             src: "/aboutMeAnimation.riv",
             canvas: canvas,
-            autoplay: true
+            autoplay: true,
         });
+        if(r){
+            console.log(r);
+        }
     })
 
    
 
 </script>
 
-<div class="w-full container flex justify-center">
-    <canvas bind:this={canvas} width={canvasWidth} height={canvasHeight}></canvas>
-
-</div>
+<canvas id="retina-canvas" bind:this={canvas} width={canvasWidth} height={canvasHeight}></canvas>
 
 <style>
 
