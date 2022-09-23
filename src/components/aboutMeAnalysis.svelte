@@ -13,6 +13,13 @@
             src: "/aboutMeAnimation.riv",
             canvas: canvas,
             autoplay: true,
+            stateMachines: 'State Machine 1', 
+            onLoad: (_) => {
+                const inputs = r.stateMachineInputs('State Machine 1');
+                const onVisible = inputs.find(i => i.name === 'onVisible');
+                console.log(onVisible);
+                onVisible.value = true;
+            }
         });
         if(r){
             console.log(r);
