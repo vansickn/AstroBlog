@@ -5,10 +5,8 @@
 
     let canvas;
     let scroll;
-    let canvasWidth = 4000;
-    let canvasHeight = 2000;
-
-    let hoveringOnAbout = false;
+    let canvasWidth = 2000;
+    let canvasHeight = 1000;
 
 
     // initialize r before I set it in the onMount function. Then, can access.
@@ -19,27 +17,49 @@
             canvas: canvas,
             autoplay: true,
             stateMachines: 'orbit_state_machine', 
+            animations: ['inner_orbit_rotate', 'about_planet_rotate'],
             artboard: 'solar_system',
             onLoad: (_) => {
-                const inputs = r.stateMachineInputs('orbit_state_machine');
-                const about_planet_hover = inputs.find(i => i.name === 'about_planet_hover');
-                console.log(about_planet_hover);
+                // const inputs = r.stateMachineInputs('orbit_state_machine');
+                // const about_planet_hover = inputs.find(i => i.name === 'about_planet_hover');
+                // console.log(about_planet_hover);
+                console.log(r);
             },
             onStateChange: (_) => {
               console.log("state changes");
             },
+            
         });
     })
 
-    // $: if (scroll > 400) {
-    //     // 400 is a default value for now, in the future need to make calculate exact point.
-    //     console.log(scroll);
-    //     const inputs = r.stateMachineInputs('State Machine 1');
-    //     const onVisible = inputs.find(i => i.name === 'onVisible');
-    //     // start onVisible animation
-    //     onVisible.value = true;
-    // }
+    let hoveringOnAbout = false;
 
+    function handleHover(){
+      const inputs = r.stateMachineInputs('orbit_state_machine');
+      const about_planet_hover = inputs.find(i => i.name === 'about_planet_hover');
+      if (about_planet_hover.value == true){
+        console.log(r.playingAnimationNames);
+        console.log("hovering over planet");
+
+        r.pause('inner_orbit_rotate');
+        document.getElementById("retina-canvas-orbit").style.cursor = 'pointer';
+        hoveringOnAbout = true;
+      }else{
+        r.play('inner_orbit_rotate');
+        document.getElementById("retina-canvas-orbit").style.cursor = 'default';
+        hoveringOnAbout = false;
+      }
+    }
+    
+    function handleClick(){
+        console.log("Function Fired");
+        if(hoveringOnAbout){
+            console.log("Can travel");
+            location.href = "/about";
+        }else{
+            console.log("Cannot Travel"); 
+        }
+    }
    
 
 </script>
@@ -47,39 +67,9 @@
 
 <svelte:window bind:scrollY={scroll}/>
 
-<canvas id="retina-canvas" bind:this={canvas} width={canvasWidth} height={canvasHeight}></canvas>
+<canvas id="retina-canvas-orbit" on:click={handleClick} on:mousemove={handleHover} bind:this={canvas} width={canvasWidth} height={canvasHeight}></canvas>
 
 <style>
 
-    /* #aboutMePlanet {
-        animation: floating 6s ease-in-out 0s infinite;
-    }
-
-    #largeOutline {
-         box-shadow: 120px 80px 40px 20px #0ff;
-    }
-
-    #inspectPlanetFrame {
-        animation: fadeIn 0.5s ease-in 1s;
-    }
-
-    #planetNumberAbout {
-        animation: fadeIn 0.5s ease-in 1s;
-    } */
-
-    @keyframes floating {
-    0% { transform: translate(0,  -1px); }
-    50%  { transform: translate(0, 2px); }
-    100%   { transform: translate(0, -1px); }   
-	}
-
-    @keyframes fadeIn {
-        0% {
-            opacity: 0%;
-        }
-        100% {
-            opacity: 100%;
-        }
-    }
 
 </style>
