@@ -2,7 +2,8 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import OrbitLinks from "../components/OrbitLinks.svelte";
+// import OrbitLinks from "../components/OrbitLinks.svelte";
+import OrbitLinks from "../components/OrbitLinksNew.svelte"
 import Stars from "../components/Stars.svelte";
 import About from "../components/aboutMeAnalysis.svelte";
 
@@ -30,7 +31,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 			<!-- class="w-full min-h-screen" -->
 			<div class="grid grid-cols-1 items-center justify-items-center">
 				
-				<OrbitLinks client:load></OrbitLinks>
+				<div class="container flex flex-col justify-center max-w-full">
+					<OrbitLinks client:load></OrbitLinks>
+				</div>
 					
 				<div class="container flex flex-col mb-24">
 					<h1 id="heroText" class="
