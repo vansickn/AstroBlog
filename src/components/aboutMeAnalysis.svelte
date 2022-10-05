@@ -5,8 +5,8 @@
 
     let canvas;
     let scroll;
-    let canvasWidth = 4000;
-    let canvasHeight = 2000;
+    let canvasWidth = 2000;
+    let canvasHeight = 1000;
 
     let hoveringOnVisit = false;
 
@@ -16,7 +16,7 @@
             console.log("Can travel");
             location.href = "/about";
         }else{
-            console.log("Cannot Travel");
+            console.log("Cannot Travel"); 
         }
     }
 
@@ -32,13 +32,11 @@
             src: "/aboutMeAnimation.riv",
             canvas: canvas,
             autoplay: true,
+            artboard: 'about_me_card',
             stateMachines: 'State Machine 1', 
             onLoad: (_) => {
                 const inputs = r.stateMachineInputs('State Machine 1');
                 const onVisible = inputs.find(i => i.name === 'onVisible');
-                const onVisitedHover = inputs.find(i => i.name === 'onVisitPlanetHover');
-                console.log(onVisitedHover);
-                // onVisible.value = true;
             },
             onStateChange: (_) => {
                 console.log("Changed State");
