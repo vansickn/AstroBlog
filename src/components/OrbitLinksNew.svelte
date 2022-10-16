@@ -17,7 +17,14 @@
             canvas: canvas,
             autoplay: true,
             stateMachines: 'orbit_state_machine', 
-            animations: ['inner_orbit_rotate', 'about_planet_rotate'],
+            animations: [
+              'inner_orbit_rotate',
+              'about_planet_rotate',
+              'outer_orbit_rotate',
+              'blog_planet_rotate',
+              'middle_orbit_rotate',
+              'work_planet_rotate'
+            ],
             artboard: 'solar_system',
             onLoad: (_) => {
                 // const inputs = r.stateMachineInputs('orbit_state_machine');
@@ -33,30 +40,48 @@
     })
 
     let hoveringOnAbout = false;
+    let hoveringOnWork = false;
+    let hoveringOnBlog = false;
 
     function handleHover(){
       const inputs = r.stateMachineInputs('orbit_state_machine');
       const about_planet_hover = inputs.find(i => i.name === 'about_planet_hover');
+      const blog_planet_hover = inputs.find(i => i.name === 'blog_planet_hover');
+      const work_planet_hover = inputs.find(i => i.name === 'work_planet_hover');
+      // about planet
       if (about_planet_hover.value == true){
-        console.log(r.playingAnimationNames);
-        console.log("hovering over planet");
-
         r.pause('inner_orbit_rotate');
         document.getElementById("retina-canvas-orbit").style.cursor = 'pointer';
         hoveringOnAbout = true;
-      }else{
+      }else if(blog_planet_hover.value == true){
+        r.pause('outer_orbit_rotate');
+        document.getElementById("retina-canvas-orbit").style.cursor = 'pointer';
+        hoveringOnBlog = true;
+      }else if(work_planet_hover.value == true){
+        r.pause('middle_orbit_rotate');
+        document.getElementById("retina-canvas-orbit").style.cursor = 'pointer';
+        hoveringOnWork = true;
+      }
+      else{
         r.play('inner_orbit_rotate');
+        r.play('outer_orbit_rotate');
+        r.play('middle_orbit_rotate');
         document.getElementById("retina-canvas-orbit").style.cursor = 'default';
         hoveringOnAbout = false;
+        hoveringOnBlog = false;
+        hoveringOnWork = false;
       }
     }
     
     function handleClick(){
-        console.log("Function Fired");
         if(hoveringOnAbout){
-            console.log("Can travel");
             location.href = "/about";
-        }else{
+        }else if(hoveringOnBlog){
+            location.href = "/blog";
+        }else if(hoveringOnWork){
+            location.href = "/testing";
+        }
+        else{
             console.log("Cannot Travel"); 
         }
     }
