@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import BlogCard from '../components/BlogCard.svelte';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
@@ -13,45 +14,65 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 <!DOCTYPE html>
 <html lang="en-us">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+
 		<style>
-			ul {
-				list-style-type: none;
-				padding: unset;
-			}
-			ul li {
-				display: flex;
-			}
-			ul li time {
-				flex: 0 0 130px;
-				font-style: italic;
-				color: #888;
-			}
-			ul li a:visited {
-				color: #8e32dc;
-			}
+		@font-face {
+			font-family: FuturaBold;
+			src: url('FuturaHeavyfont.ttf');
+		}
+
+		#heroText {
+			font-family: FuturaBold;
+			animation: slideFromTopFade;
+			animation-duration: 800ms;
+			animation-timing-function: ease-in-out;
+		}
 		</style>
+
 	</head>
-	<body class="bg-gray-900">
-		<Header />
-		<main>
-			<content>
-				<ul>
-					{posts.map((post) => (
-						<li>
-							<time datetime={post.frontmatter.pubDate}>
-								{new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
-									year: 'numeric',
-									month: 'short',
-									day: 'numeric',
-								})}
-							</time>
-							<a href={post.url}>{post.frontmatter.title}</a>
-						</li>
+	<body class="prose
+		prose-invert
+		bg-gradient-to-b
+		from-gray-900
+		to-gray-700
+		h-screen
+		"> 
+		<h1 id="heroText" class="
+		select-none
+		text-center
+		font-bold
+		text-transparent 
+		text-5xl
+		bg-clip-text 
+		bg-gradient-to-r 
+		from-red-300 
+		to-red-600
+		pb-5
+		mt-20
+		">
+		Posts
+		</h1>
+
+		<!-- Steps for Blog Posts -->
+		<!-- 1. Create Blog Card Component. -->
+		<!-- 1a. This should take in Tags, Date, Title -->
+		<!-- 2. Using Posts.map, create a component, and place in a grid / col depending on what looks best -->
+		<div class="container flex flex-col gap-2">
+			{posts.map((post) => (
+						// <li>
+						// 	<time datetime={post.frontmatter.pubDate}>
+						// 		{new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
+						// 			year: 'numeric',
+						// 			month: 'short',
+						// 			day: 'numeric',
+						// 		})}
+						// 	</time>
+						// 	<a href={post.url}>{post.frontmatter.title}</a>
+						// </li>
+
+						<BlogCard title={post.frontmatter.title} url={post.url}></BlogCard>
 					))}
-				</ul>
-			</content>
-			<Footer />
-		</main>
+		</div>
 	</body>
+
 </html>
