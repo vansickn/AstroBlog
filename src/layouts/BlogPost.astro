@@ -2,6 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Stars from "../components/Stars.svelte";
 
 export interface Props {
 	content: {
@@ -10,6 +11,8 @@ export interface Props {
 		pubDate?: string;
 		updatedDate?: string;
 		heroImage?: string;
+		characterCount?: number;
+		// tags?: list;
 	};
 }
 
@@ -23,12 +26,14 @@ const {
 		<BaseHead title={title} description={description} />
 	</head>
 
+	
 	<body class="
-		bg-gradient-to-b
+	bg-gradient-to-b
 		from-gray-900
-		to-gray-600
+		to-gray-800
 		">
 		<Header />
+		<Stars client:idle></Stars>
 		<main>
 			<article class="
 			prose
@@ -39,6 +44,7 @@ const {
 			prose-img:rounded-xl
 			prose-img:shadow-2xl
 			">
+			<h1 class="title">{title}</h1>
 				{heroImage && (
 					<img
 						width={720}
@@ -47,7 +53,6 @@ const {
 						alt=""
 					/>
 				)}
-				<h1 class="title">{title}</h1>
 				{pubDate && <time>{pubDate}</time>}
 				{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
 				<hr/>
