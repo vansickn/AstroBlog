@@ -3,12 +3,15 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import BlogCard from '../components/BlogCard.svelte';
+import Stars from "../components/Stars.svelte";
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
+console.log("HEYY");
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 );
+console.log(posts[0].frontmatter);
 ---
 
 <!DOCTYPE html>
@@ -30,13 +33,14 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 		</style>
 
 	</head>
-	<body class="prose
+	<body id="home" class="prose
 		prose-invert
 		bg-gradient-to-b
 		from-gray-900
 		to-gray-700
-		h-screen
 		"> 
+
+		<Stars client:idle></Stars>
 		<h1 id="heroText" class="
 		select-none
 		text-center
@@ -57,20 +61,9 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 		<!-- 1. Create Blog Card Component. -->
 		<!-- 1a. This should take in Tags, Date, Title -->
 		<!-- 2. Using Posts.map, create a component, and place in a grid / col depending on what looks best -->
-		<div class="container flex flex-col gap-2">
+		<div class="container flex flex-col max-w-full gap-4 items-center">
 			{posts.map((post) => (
-						// <li>
-						// 	<time datetime={post.frontmatter.pubDate}>
-						// 		{new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
-						// 			year: 'numeric',
-						// 			month: 'short',
-						// 			day: 'numeric',
-						// 		})}
-						// 	</time>
-						// 	<a href={post.url}>{post.frontmatter.title}</a>
-						// </li>
-
-						<BlogCard title={post.frontmatter.title} url={post.url}></BlogCard>
+						<BlogCard title={post.frontmatter.title} url={post.url} heroImage={post.frontmatter.heroImage} description={post.frontmatter.description}></BlogCard>
 					))}
 		</div>
 	</body>
