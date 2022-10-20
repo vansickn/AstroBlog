@@ -17,13 +17,15 @@ export interface Props {
 }
 
 const {
-	content: { title, description, pubDate, updatedDate, heroImage },
+	content: { title, description, pubDate, updatedDate, heroImage, characterCount },
 } = Astro.props as Props;
 ---
 
 <html>
 	<head>
 		<BaseHead title={title} description={description} />
+
+		
 	</head>
 
 	
@@ -44,16 +46,20 @@ const {
 			prose-img:rounded-xl
 			prose-img:shadow-2xl
 			">
-			<h1 class="title">{title}</h1>
+			<h1 class="not-prose">{title}</h1>
+			<div class="container flex flex-row justify-start gap-10 items-start not-prose">
+				{pubDate && <p>{pubDate}</p>}
+				{characterCount && <p>{Math.ceil(characterCount / 265)} minute read</p>}
+			</div>
 				{heroImage && (
 					<img
 						width={720}
 						height={360}
 						src={heroImage}
 						alt=""
+						class="not-prose"
 					/>
 				)}
-				{pubDate && <time>{pubDate}</time>}
 				{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
 				<hr/>
 				<slot />
@@ -62,3 +68,15 @@ const {
 		<Footer />
 	</body>
 </html>
+
+<style>
+
+			@font-face {
+			font-family: FuturaBold;
+			src: url('/FuturaHeavyfont.ttf');
+			}
+
+			article {
+				font-family: FuturaBold;
+			}
+		</style>
