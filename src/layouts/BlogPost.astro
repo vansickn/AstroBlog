@@ -46,10 +46,12 @@ const {
 			prose-img:rounded-xl
 			prose-img:shadow-2xl
 			">
-			<h1 class="not-prose">{title}</h1>
-			<div class="container flex flex-row justify-start gap-10 items-start not-prose">
-				{pubDate && <p>{pubDate}</p>}
-				{characterCount && <p>{Math.ceil(characterCount / 265)} minute read</p>}
+			<div class="not-prose">
+				<h1 class="text-5xl">{title}</h1>
+			</div>
+			<div class="container flex flex-row justify-start gap-10 items-center not-prose mt-2">
+				{pubDate && <p> <svg class="w-6 h-6 inline mb-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> {pubDate}</p>}
+				{characterCount && <p>  <svg class="w-6 h-6 inline mb-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> {Math.ceil(characterCount / 265)} minute read</p>}
 			</div>
 				{heroImage && (
 					<img
@@ -57,7 +59,6 @@ const {
 						height={360}
 						src={heroImage}
 						alt=""
-						class="not-prose"
 					/>
 				)}
 				{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
@@ -78,5 +79,9 @@ const {
 
 			article {
 				font-family: FuturaBold;
+			}
+
+			h1 {
+				margin-bottom: 0;
 			}
 		</style>
