@@ -1,14 +1,16 @@
 <script>
+    import Tag from '../components/tag.svelte';
 
+    // props
     export let title;
     export let url;
     // export let date;
     export let heroImage;
     export let description;
     export let characterCount;
+    export let tags;
 
     function lengthOfPostInMinutes(){
-        console.log(characterCount);
         if(characterCount != null){
             return Math.ceil(characterCount / 265);
         }
@@ -16,6 +18,7 @@
             return null
         }
     }
+    console.log(tags);
 
 
 </script>
@@ -29,8 +32,22 @@
             {#if characterCount != null}
             <h2 id="post-title" class='m-0 ml-4 mr-4 sm:text-sm text-xs text-gray-400'>{lengthOfPostInMinutes()} minute read</h2>
             {/if}
-            <p id="post-title" class="m-0 ml-4 mr-4 mt-4 text-sm md:text-base sm:text-lg">{description}</p>
+            <p id="post-title" class="m-0 ml-4 mr-4 mt-4 mb-2 lg:mb-0 text-sm md:text-base sm:text-lg">{description}</p>
+
+
+            {#if tags != undefined}
+            <div id="post-title" class=" pl-4 pr-4 mt-auto mb-1 sm:mb-2 container flex flex-row gap-2 flex-wrap justify-start">
+                {#each tags || '' as tag}
+                    <Tag title={tag}></Tag>
+                {/each}
+            </div>
+            {/if}
         </div>
+        <!-- <div class="not-prose container flex flex-row gap-2 flex-wrap justify-start">
+					{tags && tags.map((tag) => (
+						<Tag title={tag}></Tag>
+					))}
+				</div> -->
     <!-- </div> -->
 </a>
 
