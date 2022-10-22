@@ -3,6 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Stars from "../components/Stars.svelte";
+import Tag from "../components/tag.svelte";
 
 export interface Props {
 	content: {
@@ -12,12 +13,12 @@ export interface Props {
 		updatedDate?: string;
 		heroImage?: string;
 		characterCount?: number;
-		// tags?: list;
+		tags?: string[];
 	};
 }
 
 const {
-	content: { title, description, pubDate, updatedDate, heroImage, characterCount },
+	content: { title, description, pubDate, updatedDate, heroImage, characterCount, tags },
 } = Astro.props as Props;
 ---
 
@@ -35,7 +36,7 @@ const {
 		to-gray-800
 		">
 		<Header />
-		<Stars client:idle></Stars>
+		<Stars client:only="svelte"></Stars>
 		<main>
 			<article class="
 			prose
@@ -61,8 +62,13 @@ const {
 						alt=""
 					/>
 				)}
-				{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
-				<hr/>
+				<!-- {updatedDate && <div>Last updated on <time>{updatedDate}</time></div>} -->
+				<div class="not-prose container flex flex-row gap-2 flex-wrap justify-start">
+					{tags && tags.map((tag) => (
+						<Tag title={tag}></Tag>
+					))}
+				</div>
+				<hr class="mt-0">
 				<slot />
 			</article>
 		</main>
