@@ -6,12 +6,10 @@ import BlogCard from '../components/BlogCard.svelte';
 import Stars from "../components/Stars.svelte";
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
-console.log("HEYY");
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 );
-console.log(posts[0].frontmatter);
 ---
 
 <!DOCTYPE html>
