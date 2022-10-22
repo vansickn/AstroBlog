@@ -30,6 +30,7 @@ console.log(posts[0].frontmatter);
 			animation-duration: 800ms;
 			animation-timing-function: ease-in-out;
 		}
+
 		</style>
 
 	</head>
@@ -61,7 +62,7 @@ console.log(posts[0].frontmatter);
 		<!-- 1. Create Blog Card Component. -->
 		<!-- 1a. This should take in Tags, Date, Title -->
 		<!-- 2. Using Posts.map, create a component, and place in a grid / col depending on what looks best -->
-		<div class="container grid grid-cols-6 w-full lg:w-1/2 m-auto gap-4 items-stretch pb-10">
+		<div id="posts-container" class="container grid grid-cols-6 w-full lg:w-950 m-auto gap-4 items-stretch pb-10">
 			{posts.map((post, index) => (
 						<BlogCard title={post.frontmatter.title} url={post.url} heroImage={post.frontmatter.heroImage} description={post.frontmatter.description} characterCount={post.frontmatter.characterCount} tags={post.frontmatter.tags} spanIndex={index}></BlogCard>
 					))}
