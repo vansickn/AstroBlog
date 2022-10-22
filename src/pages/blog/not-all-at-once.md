@@ -5,6 +5,7 @@ description: "A lot of people try and figure it out by changing their life in a 
 pubDate: "October 17 2022"
 heroImage: "/all_at_once.png"
 characterCount: 1000
+tags: ['Self Development', 'Books']
 ---
 
 This is an example post, we want to understand how many characters in the blogpost.
