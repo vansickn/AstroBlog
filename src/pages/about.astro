@@ -18,10 +18,19 @@ import Stars from '../components/Stars.svelte';
 
 		body {
 			font-family: FuturaBold;
-			animation: slideFromTopFade;
-			animation-duration: 800ms;
-			animation-timing-function: ease-in-out;
 		}
+
+        @keyframes floating {
+            0% { transform: translate(0,  -2px); }
+            50%  { transform: translate(0, 4px); }
+            100%   { transform: translate(0, -2px); }   
+        }
+
+        #header-image {
+            animation: floating 5s;
+            animation-timing-function:ease-in-out;
+            animation-iteration-count: infinite;
+        }
 
 		</style>
 
@@ -52,8 +61,8 @@ import Stars from '../components/Stars.svelte';
 					</h1>
     </div>
 
-    <div class="">
-
+    <div class="container grid grid-cols-6 m-auto">
+        <img id="header-image" src="/headshot.jpg" class="rounded-full shadow-lg col-span-2 hover:scale-105 transition duration-700" alt="" srcset="">
     </div>
     
 </body>
