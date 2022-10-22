@@ -96,6 +96,7 @@
         background:white;
         border-radius: 100%;
         z-index: -3;
+        animation: fadeIn 500ms ease-in;
     }
     .starMiddle {
         position:absolute;
@@ -104,6 +105,7 @@
         background:white;
         border-radius: 100%;
         z-index: -2;
+        animation: fadeIn 500ms ease-in;
     }
     .starFront {
         position:absolute;
@@ -112,5 +114,15 @@
         background:white;
         border-radius: 100%;
         z-index: -1;
+        animation: fadeIn 500ms ease-in;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0%;
+        }
+        100% {
+            opacity: 100%;
+        }
     }
 </style>
