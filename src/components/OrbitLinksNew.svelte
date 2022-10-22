@@ -96,5 +96,17 @@
 
 <style>
 
+  canvas {
+    animation: fadeIn 3s ease;
+  }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 
 </style>
