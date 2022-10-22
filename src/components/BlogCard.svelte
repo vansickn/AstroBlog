@@ -50,9 +50,18 @@
             return 'container flex flex-col'
         }
     }
+    
+    function calculateMaxHeight(){
+        if(spanStyle == 'col-span-6'){
+            return 'h-auto lg:max-h-72'
+        }else if(spanStyle == 'col-span-3'){
+            return 'h-auto'
+        }
+    }
+    console.log(calculateMaxHeight);
 
     let heroImageSyle = `${calculateImageWidth()} m-0 rounded-xl rounded-r-none object-cover`;
-    let anchorContainerStyle = `${calculateFlexDirection()} border-gray-800 border-2 rounded-xl bg-gradient-to-br from-gray-900 bg-gray-800 hover:scale-105 transition duration-500 w-full sm:pb-0 pb-4 overflow-hidden ${spanStyle}`;
+    let anchorContainerStyle = `${calculateFlexDirection()} border-gray-800 border-2 rounded-xl bg-gradient-to-br from-gray-900 bg-gray-800 hover:scale-105 transition duration-500 sm:pb-0 pb-4 overflow-hidden ${calculateMaxHeight()} ${spanStyle}`;
     
 
 
