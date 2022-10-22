@@ -9,6 +9,7 @@
     export let description;
     export let characterCount;
     export let tags;
+    export let spanIndex;
 
     function lengthOfPostInMinutes(){
         if(characterCount != null){
@@ -18,23 +19,38 @@
             return null
         }
     }
-    console.log(tags);
+    function calculateSpan(){
+        // console.log(spanIndex+1 % 3);
+        if((spanIndex+1) % 3 == 1){
+            console.log(6);
+            return 'col-span-6';
+        }else{
+            console.log(3);
+            return 'col-span-3'
+
+        }
+    }
+    calculateSpan();
+
+    let heroImageSyle = "md:w-1/2 w-full m-0 rounded-xl rounded-r-none object-cover";
+    let anchorContainerStyle = "container flex flex-col md:flex-row md:grid-cols-2 border-gray-800 border-2 rounded-xl bg-gradient-to-br from-gray-900 bg-gray-800 hover:scale-105 transition duration-500 w-full lg:w-4/6 sm:pb-0 pb-4 overflow-hidden h-auto md:max-h-64";
+    
+    let spanStyle = ` hey ${calculateSpan()}`;
+    console.log(spanStyle);
 
 
 </script>
 
 
-<a href={url} class="container flex flex-col md:flex-row md:grid-cols-2 border-gray-800 border-2 rounded-xl bg-gradient-to-br from-gray-900 bg-gray-800 hover:scale-105 transition duration-500 w-full lg:w-4/6 sm:pb-0 pb-4 overflow-hidden h-auto md:max-h-64">
+<a href={url} class={anchorContainerStyle}>
 <!-- <div class="container border-gray-800 border-2 rounded-xl bg-gradient-to-br from-gray-900 bg-gray-800 no-underline flex flex-row hover:scale-105 transition transition-duration-1000 w-full sm:w-3/4"> -->
-        <img src={heroImage} class="md:w-1/2 w-full m-0 rounded-xl rounded-r-none object-cover" alt="">
+        <img src={heroImage} class={heroImageSyle} alt="">
         <div class="container flex flex-col ">
             <h4 id="post-title" class='m-0 ml-4 mr-4 mt-4 text-lg sm:text-2xl'>{title}</h4>
             {#if characterCount != null}
             <h2 id="post-title" class='m-0 ml-4 mr-4 sm:text-sm text-xs text-gray-400'>{lengthOfPostInMinutes()} minute read</h2>
             {/if}
             <p id="post-title" class="m-0 ml-4 mr-4 mt-4 mb-2 lg:mb-0 text-sm md:text-base sm:text-lg">{description}</p>
-
-
             {#if tags != undefined}
             <div id="post-title" class=" pl-4 pr-4 mt-auto mb-1 sm:mb-2 container flex flex-row gap-2 flex-wrap justify-start">
                 {#each tags || '' as tag}

@@ -62,8 +62,8 @@ console.log(posts[0].frontmatter);
 		<!-- 1a. This should take in Tags, Date, Title -->
 		<!-- 2. Using Posts.map, create a component, and place in a grid / col depending on what looks best -->
 		<div class="container flex flex-col max-w-full gap-4 items-center pb-10">
-			{posts.map((post) => (
-						<BlogCard title={post.frontmatter.title} url={post.url} heroImage={post.frontmatter.heroImage} description={post.frontmatter.description} characterCount={post.frontmatter.characterCount} tags={post.frontmatter.tags}></BlogCard>
+			{posts.map((post, index) => (
+						<BlogCard title={post.frontmatter.title} url={post.url} heroImage={post.frontmatter.heroImage} description={post.frontmatter.description} characterCount={post.frontmatter.characterCount} tags={post.frontmatter.tags} spanIndex={index}></BlogCard>
 					))}
 		</div>
 	</body>
