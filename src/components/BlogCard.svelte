@@ -1,4 +1,5 @@
 <script>
+  import { claim_component } from 'svelte/internal';
     import Tag from '../components/tag.svelte';
 
     // props
@@ -19,24 +20,40 @@
             return null
         }
     }
+
     function calculateSpan(){
         // console.log(spanIndex+1 % 3);
         if((spanIndex+1) % 3 == 1){
-            console.log(6);
             return 'col-span-6';
         }else{
-            console.log(3);
-            return 'col-span-3'
+            return 'col-span-6 md:col-span-3'
 
         }
     }
-    calculateSpan();
 
-    let heroImageSyle = "md:w-1/2 w-full m-0 rounded-xl rounded-r-none object-cover";
-    let anchorContainerStyle = "container flex flex-col md:flex-row md:grid-cols-2 border-gray-800 border-2 rounded-xl bg-gradient-to-br from-gray-900 bg-gray-800 hover:scale-105 transition duration-500 w-full lg:w-4/6 sm:pb-0 pb-4 overflow-hidden h-auto md:max-h-64";
-    
-    let spanStyle = ` hey ${calculateSpan()}`;
+    // global spanStyle for other functions
+    var spanStyle = calculateSpan();
     console.log(spanStyle);
+
+    function calculateImageWidth(){
+        if(spanStyle == 'col-span-6'){
+            return 'md:w-1/2 w-full'
+        }else if(spanStyle == 'col-span-3'){
+            return 'w-full'
+        }
+    }
+    
+    function calculateFlexDirection(){
+        if(spanStyle == 'col-span-6'){
+            return 'container flex flex-col md:flex-row'
+        }else if(spanStyle == 'col-span-3'){
+            return 'container flex flex-col'
+        }
+    }
+
+    let heroImageSyle = `${calculateImageWidth()} m-0 rounded-xl rounded-r-none object-cover`;
+    let anchorContainerStyle = `${calculateFlexDirection()} border-gray-800 border-2 rounded-xl bg-gradient-to-br from-gray-900 bg-gray-800 hover:scale-105 transition duration-500 w-full sm:pb-0 pb-4 overflow-hidden ${spanStyle}`;
+    
 
 
 </script>
