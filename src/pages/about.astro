@@ -32,6 +32,11 @@ import Stars from '../components/Stars.svelte';
             animation-iteration-count: infinite;
         }
 
+        hr{
+        height: 1px;
+        border: none;
+        }   
+
 		</style>
 
 	</head> 
@@ -61,8 +66,66 @@ import Stars from '../components/Stars.svelte';
 					</h1>
     </div>
 
-    <div class="container grid grid-cols-6 m-auto">
-        <img id="header-image" src="/headshot.jpg" class="rounded-full shadow-lg col-span-2 hover:scale-105 transition duration-700" alt="" srcset="">
+    <div class="container flex flex-col bg-gradient-to-br from-gray-900 to-gray-800 border-gray-700 border-2 m-auto rounded-lg text-white w-full lg:w-800 shadow-2xl">
+        <div class="container grid grid-cols-3 p-4 place-items-start">
+            <div class="col-span-2 container flex flex-col">
+                <h1 class="text-6xl">Noah VanSickle</h1>
+                <p class="text-gray-500 text-2xl"> Software Engineer </p>
+                <div class="grid grid-cols-2 mt-4">
+                    <!-- Location -->
+                    <div class="container flex flex-row gap-2 items-center">
+                        <svg class="w-6 h-6 inline mb-1 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <p>New York City, NY</p>
+                    </div>
+                    <!-- College -->
+                    <div class="container flex flex-row gap-2 items-center">
+                        <svg class="w-6 h-6 inline mb-1 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path></svg>
+                        <p>Union College Graduate</p>
+                    </div>
+                    <!-- Hometown -->
+                    <div class="container flex flex-row gap-2 items-center">
+                        <svg class="w-6 h-6 inline mb-1 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        <p>Denver, CO</p>
+                    </div>
+                    <!-- Computer Science -->
+                    <div class="container flex flex-row gap-2 items-center">
+                        <svg class="w-6 h-6 inline mb-1 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        <p>Major in Computer Science</p>
+                    </div>
+                    <!-- Work -->
+                    <div class="container flex flex-row gap-2 items-center">
+                        <svg class="w-6 h-6 inline mb-0.5 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <a href="https://eskalera.com" class="decoration-dashed hover:text-blue-300">Eskalera</a>
+                    </div>
+                    <!-- Economics -->
+                    <div class="container flex flex-row gap-2 items-center">
+                        <svg class="w-6 h-6 inline mb-1 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
+                        <p>Minor in Economics</p>
+                    </div>
+                    <!-- Github -->
+                    <div class="container flex flex-row gap-2 items-center">
+                        <svg class="w-6 h-6 inline mb-1 text-blue-300" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 22.0268V19.1568C16.0375 18.68 15.9731 18.2006 15.811 17.7506C15.6489 17.3006 15.3929 16.8902 15.06 16.5468C18.2 16.1968 21.5 15.0068 21.5 9.54679C21.4997 8.15062 20.9627 6.80799 20 5.79679C20.4558 4.5753 20.4236 3.22514 19.91 2.02679C19.91 2.02679 18.73 1.67679 16 3.50679C13.708 2.88561 11.292 2.88561 8.99999 3.50679C6.26999 1.67679 5.08999 2.02679 5.08999 2.02679C4.57636 3.22514 4.54413 4.5753 4.99999 5.79679C4.03011 6.81549 3.49251 8.17026 3.49999 9.57679C3.49999 14.9968 6.79998 16.1868 9.93998 16.5768C9.61098 16.9168 9.35725 17.3222 9.19529 17.7667C9.03334 18.2112 8.96679 18.6849 8.99999 19.1568V22.0268" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 20.0267C6 20.9999 3.5 20.0267 2 17.0267" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        <a href="https://github.com/vansickn" class="decoration-dashed hover:text-blue-300"> Github Profile </a>
+                    </div>
+                    <!-- LinkedIn -->
+                    <div class="container flex flex-row gap-2 items-center">
+                        <svg class="w-6 h-6 inline mb-1 text-blue-300" width="100%" height="100%" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 17V13.5V10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 17V13.75M11 10V13.75M11 13.75C11 10 17 10 17 13.75V17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 7.01L7.01 6.99889" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        <a href="https://www.linkedin.com/in/noah-vansickle-b68131191/" class="decoration-dashed hover:text-blue-300"> LinkedIn Profile </a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-blue-300 to-blue-600 rounded-full mb-10 mr-4 ml-10 mt-4 shadow-xl">
+                <img src="/headshot.jpg" class="rounded-full p-0.5" alt="">
+            </div>
+        </div>
+        <div class="container grid grid-cols-3 pl-4 pr-4 pb-4">
+            <div class="col-span-2">
+                <h1 class="text-3xl decoration-white decoration-dotted">Professional Experience</h1>
+                <hr class="bg-blue-300">
+            </div>
+
+        </div>
+        
     </div>
     
 </body>
