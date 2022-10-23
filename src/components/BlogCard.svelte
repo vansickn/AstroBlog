@@ -61,7 +61,7 @@
     console.log(calculateMaxHeight);
 
     let heroImageSyle = `${calculateImageWidth()} m-0 object-cover`;
-    let anchorContainerStyle = `${calculateFlexDirection()} border-gray-800 border-2 rounded-xl bg-gradient-to-br from-gray-900 bg-gray-800 hover:scale-105 transition duration-500 sm:pb-0 pb-4 overflow-hidden ${calculateMaxHeight()} ${spanStyle}`;
+    let anchorContainerStyle = `${calculateFlexDirection()} border-gray-800 border-2 rounded-xl bg-gradient-to-br from-gray-900 bg-gray-800 hover:scale-105 transition duration-500 sm:pb-0 pb-4 overflow-hidden shadow-xl ${calculateMaxHeight()} ${spanStyle}`;
     
 
 
