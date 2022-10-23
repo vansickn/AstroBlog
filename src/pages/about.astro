@@ -43,7 +43,6 @@ import Stars from '../components/Stars.svelte';
 <body class="bg-gradient-to-b
 		from-gray-900
 		to-gray-800
-        h-screen
         m-auto
         ">
     <Stars client:only="svelte"></Stars>
@@ -66,7 +65,7 @@ import Stars from '../components/Stars.svelte';
 					</h1>
     </div>
 
-    <div class="container flex flex-col bg-gradient-to-br from-gray-900 to-gray-800 border-gray-700 border-2 m-auto rounded-lg text-white w-full lg:w-800 shadow-2xl">
+    <div class="container flex flex-col bg-gradient-to-br from-gray-900 to-gray-800 border-gray-700 border-2 m-auto rounded-lg text-white w-full lg:w-800 shadow-2xl mb-10">
         <div class="container grid grid-cols-3 p-4 place-items-start">
             <div class="col-span-2 container flex flex-col">
                 <h1 class="text-6xl">Noah VanSickle</h1>
@@ -118,9 +117,58 @@ import Stars from '../components/Stars.svelte';
                 <img src="/headshot.jpg" class="rounded-full p-0.5" alt="">
             </div>
         </div>
-        <div class="container grid grid-cols-3 pl-4 pr-4 pb-4">
-            <div class="col-span-2">
+        <div class="container grid grid-cols-3 pl-4 pr-4 pb-4 gap-8">
+            <!-- professional Experience title -->
+            <div class="container flex flex-col col-span-2">
                 <h1 class="text-3xl decoration-white decoration-dotted">Professional Experience</h1>
+                <hr class="bg-blue-300">
+                <!-- Most Recent work Experience -->
+                <div class="container flex flex-row mt-4 gap-4">
+                    <!-- Time line item top -->
+                    <div class="items-center">
+                        <p class="text-gray-500 text-xs mb-1">Current</p>
+                        <div class="m-auto container w-5 h-5 rounded-full border-2 p-0.5 border-blue-300 items-center">
+                            <div class="w-3 h-3 rounded-full bg-blue-300"></div>
+                        </div>
+                        <p class="text-center text-gray-500 text-xs mt-1">2022</p>
+                        <div class="w-0.5 h-20 border-l-4 border-dotted border-blue-300 m-auto mt-1"></div>
+                    </div>
+                    <div class="container flex flex-col mt-3">
+                        <a href="https://eskalera.com" class="text-2xl hover:text-blue-300">Eskalera</a>
+                        <div class="container flex flex-row -mt-1 gap-1 items-center">
+                            <p class="text-sm text-gray-500">Full Stack Software Engineer</p>
+                            <p class="text-sm text-gray-500">|</p>
+                            <svg class="w-4 h-4 inline text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <p class="text-sm text-gray-500">Remote</p>
+                        </div>
+                        <p class="mt-2 text-sm">A Lead Developer on the the company's mobile application built using Flutter. Contributed to development on a React web application, as well as a Flask API. </p>
+                    </div>
+                </div>
+                <!-- Second Most recent Work Experience -->
+                <div class="container flex flex-row gap-4 -mt-2">
+                    <!-- Time line item top -->
+                    <div class="items-center">
+                        <p class="text-gray-500 text-xs opacity-0">Current</p>
+                        <div class="m-auto container w-5 h-5 rounded-full border-2 p-0.5 border-blue-300 items-center">
+                        </div>
+                        <p class="text-center text-gray-500 text-xs mt-1">2022</p>
+                        <div class="w-0.5 h-20 border-l-4 border-dotted border-blue-300 m-auto mt-1"></div>
+                    </div>
+                    <div class="container flex flex-col mt-2.5">
+                        <a href="https://granicus.com/?gclid=CjwKCAjwzNOaBhAcEiwAD7Tb6Bd_BMhPYPeZfn9tax6C-FvYRjyXguYOO-iPj2fOIpuc8p_PSq63YxoCvOgQAvD_BwE" class="text-2xl hover:text-blue-300">Granicus</a>
+                        <div class="container flex flex-row -mt-1 gap-1 items-center">
+                            <p class="text-sm text-gray-500">TSE Intern</p>
+                            <p class="text-sm text-gray-500">|</p>
+                            <svg class="w-4 h-4 inline text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <p class="text-sm text-gray-500">Remote</p>
+                        </div>
+                        <p class="mt-2 text-sm"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- about me title -->
+            <div class="col-span-1">
+                <h1 class="text-3xl decoration-white decoration-dotted">About Me</h1>
                 <hr class="bg-blue-300">
             </div>
 
