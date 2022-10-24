@@ -46,26 +46,8 @@ import Stars from '../components/Stars.svelte';
         m-auto
         ">
     <Stars client:only="svelte"></Stars>
-    <div class="container flex flex-col mb-24 m-auto mt-20">
-					<h1 id="heroText" class="
-					select-none
-					text-center
-					font-bold
-					text-transparent 
-					text-5xl
-					md:text-6xl
-					lg:text-8xl 
-					bg-clip-text 
-					bg-gradient-to-r 
-					from-blue-300 
-					to-blue-600
-					mb-0
-					">
-					About Me
-					</h1>
-    </div>
 
-    <div class="container flex flex-col bg-gradient-to-br from-gray-900 to-gray-800 border-gray-700 border-2 m-auto rounded-lg text-white w-full lg:w-800 shadow-2xl mb-10">
+    <div class="container flex flex-col bg-gradient-to-br from-gray-900 to-gray-800 border-gray-700 border-2 m-auto rounded-lg text-white w-full lg:w-800 shadow-2xl mb-24 mt-24">
         <div class="container grid grid-cols-3 p-4 place-items-start">
             <div class="col-span-2 container flex flex-col">
                 <h1 class="text-6xl">Noah VanSickle</h1>
@@ -133,7 +115,7 @@ import Stars from '../components/Stars.svelte';
                         <p class="text-center text-gray-500 text-xs mt-1">2022</p>
                         <div class="w-0.5 h-20 border-l-4 border-dotted border-blue-300 m-auto mt-1"></div>
                     </div>
-                    <div class="container flex flex-col mt-3">
+                    <div class="container flex flex-col mt-3.5">
                         <a href="https://eskalera.com" class="text-2xl hover:text-blue-300">Eskalera</a>
                         <div class="container flex flex-row -mt-1 gap-1 items-center">
                             <p class="text-sm text-gray-500">Full Stack Software Engineer</p>
@@ -151,7 +133,7 @@ import Stars from '../components/Stars.svelte';
                         <p class="text-gray-500 text-xs opacity-0">Current</p>
                         <div class="m-auto container w-5 h-5 rounded-full border-2 p-0.5 border-blue-300 items-center">
                         </div>
-                        <p class="text-center text-gray-500 text-xs mt-1">2022</p>
+                        <p class="text-center text-gray-500 text-xs mt-1">2021</p>
                         <div class="w-0.5 h-20 border-l-4 border-dotted border-blue-300 m-auto mt-1"></div>
                     </div>
                     <div class="container flex flex-col mt-2.5">
@@ -162,14 +144,111 @@ import Stars from '../components/Stars.svelte';
                             <svg class="w-4 h-4 inline text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                             <p class="text-sm text-gray-500">Remote</p>
                         </div>
-                        <p class="mt-2 text-sm"></p>
+                        <p class="mt-2 text-sm">Redesigned and rebuilt a JIRA reporting tool for Technical Support Tickets. Decreased the running time of the script from 8 hours to less than 10 minutes.</p>
                     </div>
                 </div>
+                <!-- third Most recent Work Experience -->
+                <div class="container flex flex-row gap-4 -mt-2">
+                    <!-- Time line item top -->
+                    <div class="items-center">
+                        <p class="text-gray-500 text-xs opacity-0">Current</p>
+                        <div class="m-auto container w-5 h-5 rounded-full border-2 p-0.5 border-blue-300 items-center">
+                        </div>
+                        <p class="text-center text-gray-500 text-xs mt-1">2020</p>
+                        <div class="w-0.5 h-16 border-l-4 border-dotted border-red-300 m-auto mt-1"></div>
+                    </div>
+                    <div class="container flex flex-col mt-2.5">
+                        <a href="https://chilecrunch.com/" class="text-2xl hover:text-blue-300">Chile Colonial</a>
+                        <div class="container flex flex-row -mt-1 gap-1 items-center">
+                            <p class="text-sm text-gray-500">Logistics & Web Application Developer</p>
+                            <p class="text-sm text-gray-500">|</p>
+                            <svg class="w-4 h-4 inline text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <p class="text-sm text-gray-500">Denver, CO</p>
+                        </div>
+                        <p class="mt-2 text-sm">Designed and built a Ruby on Rails application to track orders and associated product batch codes.</p>
+                    </div>
+                </div>
+                <!-- Other Experiences -->
+                <div class="container flex flex-row gap-4 -mt-2">
+                    <!-- Time line item top -->
+                    <div class="items-center">
+                        <p class="text-gray-500 text-xs opacity-0">Current</p>
+                        <div class="m-auto container w-5 h-5 rounded-full border-2 p-0.5 border-red-300 items-center">
+                        </div>
+                        <!-- <p class="text-center text-gray-500 text-xs mt-1">2020</p> -->
+                    </div>
+                    <div class="container flex flex-col mt-2.5">
+                        <a href="/projects" class="text-2xl hover:text-blue-300">Other Projects <svg class="w-6 h-6 inline mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg> </a>
+                        <div class="container flex flex-row -mt-1 gap-1 items-center">
+                            <!-- <p class="text-sm text-gray-500"></p>
+                            <p class="text-sm text-gray-500"></p> -->
+                            <svg class="w-4 h-4 inline text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <p class="text-sm text-gray-500">Remote</p>
+                        </div>
+                        <p class="mt-2 text-sm">View my non-professional projects I have developed and contributed to over my years of learning Software Developement.</p>
+                    </div>
+                </div>
+
             </div>
             <!-- about me title -->
             <div class="col-span-1">
                 <h1 class="text-3xl decoration-white decoration-dotted">About Me</h1>
                 <hr class="bg-blue-300">
+                <p class="mt-2 text-sm">
+                    I am a curious and passionate individual who loves to create. I'm deeply driven to produce almost anything in the medium of code, and am drawn to developing solutions to novel problems. 
+                </p>
+                <h1 class="text-3xl decoration-white decoration-dotted mt-3">Skills</h1>
+                <hr class="bg-blue-300">
+                <div class="container grid grid-cols-4 items-stretch mt-1 gap-1">
+                    <div class="border-2 border-blue-300 rounded">
+                        <p class="text-center text-sm">Flutter</p>
+                    </div>
+                    <div class="border-2 border-blue-300 rounded">
+                        <p class="text-center text-sm">Python</p>
+                    </div>
+                    <div class="border-2 border-blue-300 rounded">
+                        <p class="text-center text-sm">C</p>
+                    </div>
+                    <div class="border-2 border-blue-300 rounded">
+                        <p class="text-center text-sm">React</p>
+                    </div>
+                    <div class="border-2 border-blue-300 rounded">
+                        <p class="text-center text-sm">JS</p>
+                    </div>
+                    <div class="border-2 border-blue-300 rounded">
+                        <p class="text-center text-sm">SQL</p>
+                    </div>
+                    <div class="border-2 border-blue-300 rounded">
+                        <p class="text-center text-xs mt-0.5">Firebase</p>
+                    </div>
+                    <div class="border-2 border-blue-300 rounded">
+                        <p class="text-center text-xs mt-0.5">NodeJS</p>
+                    </div>
+                </div>
+                <h1 class="text-3xl decoration-white decoration-dotted mt-3">Interests</h1>
+                <hr class="bg-blue-300">
+                <div class="container grid grid-cols-3 items-stretch mt-1 gap-1">
+                    <div class="border-2 border-red-300 rounded">
+                        <p class="text-center text-xs mt-0.5">Philosophy</p>
+                    </div>
+                    <div class="border-2 border-red-300 rounded col-span-2">
+                        <p class="text-center text-sm">Video Production</p>
+                    </div>
+                    <div class="border-2 border-red-300 rounded">
+                        <p class="text-center text-sm">Space</p>
+                    </div>
+                    <div class="border-2 border-red-300 rounded">
+                        <p class="text-center text-sm">Baseball</p>
+                    </div>
+                    <div class="border-2 border-red-300 rounded">
+                        <p class="text-center text-sm">Books</p>
+                    </div>
+                </div>
+                <h1 class="text-3xl decoration-white decoration-dotted mt-3">Awards</h1>
+                <hr class="bg-blue-300">
+                <div class="container flex flex-row gap-2 mt-0.5">
+                    <a href="https://www.youtube.com/watch?v=EF50oyEu6Hg" class="text-sm hover:text-blue-300">Winner of 2011 USDA Healthy Habits Video Competition</a>
+                </div>
             </div>
 
         </div>
