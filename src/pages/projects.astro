@@ -1,0 +1,70 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BlogCard from '../components/BlogCard.svelte';
+import Stars from "../components/Stars.svelte";
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
+---
+
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+
+		<style>
+		@font-face {
+			font-family: FuturaBold;
+			src: url('FuturaHeavyfont.ttf');
+		}
+
+		#heroText {
+			font-family: FuturaBold;
+			animation: slideFromTopFade;
+			animation-duration: 800ms;
+			animation-timing-function: ease-in-out;
+		}
+
+		</style>
+
+	</head>
+	<body id="home" class="prose
+		prose-invert
+		bg-gradient-to-b
+		from-gray-900
+		to-gray-800
+		"> 
+
+		<Stars client:only="svelte"></Stars>
+		<h1 id="heroText" class="
+		select-none
+		text-center
+		font-bold
+		text-transparent 
+		text-5xl
+		bg-clip-text 
+		bg-gradient-to-r 
+		from-red-300 
+		to-red-600
+		pb-5
+		mt-20
+		">
+		Posts
+		</h1>
+
+		<!-- Steps for Blog Posts -->
+		<!-- 1. Create Blog Card Component. -->
+		<!-- 1a. This should take in Tags, Date, Title -->
+		<!-- 2. Using Posts.map, create a component, and place in a grid / col depending on what looks best -->
+		<div id="posts-container" class="container grid grid-cols-6 w-full lg:w-950 m-auto gap-4 items-stretch pb-10">
+			{posts.map((post, index) => (
+						<BlogCard title={post.frontmatter.title} url={post.url} heroImage={post.frontmatter.heroImage} description={post.frontmatter.description} characterCount={post.frontmatter.characterCount} tags={post.frontmatter.tags} spanIndex={index}></BlogCard>
+					))}
+		</div>
+	</body>
+
+</html>
