@@ -8,15 +8,15 @@
 
 <svelte:window bind:innerWidth={screenWidth} bind:innerHeight={screenHeight}></svelte:window>
 
-<body class="h-3/4 m-auto">
+<body class="m-auto">
 
 <!-- width div -->
-  <div class="w-3/4 h-full justify-center items-center gap-4 m-auto relative block"> 
+  <div class="w-full h-800 justify-center items-center gap-4 m-auto relative block"> 
 
 
-    <div id="sun" class="w-36 h-36 bg-yellow-500 rounded-full"></div> 
+    <img id="sun" src="/avatar.png" alt="avatar" class="w-48 m-auto bg-yellow-500 rounded-full">
     <a href="/about">
-        <div id="inner" class="bg-gradient-to-l from-blue-500 to-blue-300 h-20 w-20 rounded-full">
+        <div id="inner" class="bg-gradient-to-l from-blue-500 to-blue-300 h-20 w-20 rounded-full hidden sm:inline">
     
           <div class="bg-gradient-to-l from-gray-900 to-gray-700 w-5/6 h-5/6 rounded-full left-0 right-0 top-0 bottom-0 m-auto absolute"></div>
           <div id="aboutIcon" class="w-full h-full m-auto text-white relative block">
@@ -30,7 +30,7 @@
         </div>
     </a>
     
-    <div id="middle" class="bg-gradient-to-t from-yellow-700 to-yellow-300 h-24 w-24 rounded-full">
+    <div id="middle" class="bg-gradient-to-t from-yellow-700 to-yellow-300 h-24 w-24 rounded-full hidden sm:inline">
       <div class="bg-gradient-to-t from-gray-900 to-gray-700 w-5/6 h-5/6 rounded-full left-0 right-0 top-0 bottom-0 m-auto absolute"></div>
       <div id="workIcon" class="w-full h-full m-auto text-white relative block">
         <svg id="workIconSVG" class="w-1/2 h-1/2 inset-0 m-auto absolute" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +42,7 @@
     </div>
 
 
-  <div id="outer" class="bg-gradient-to-b from-red-700 to-red-300 w-32 h-32 rounded-full">
+  <div id="outer" class="bg-gradient-to-b from-red-700 to-red-300 w-32 h-32 rounded-full hidden sm:inline">
     <div class="bg-gradient-to-b from-gray-900 to-gray-700 w-5/6 h-5/6 rounded-full left-0 right-0 top-0 bottom-0 m-auto absolute"></div>
     <div id="blogIcon" class="w-full h-full m-auto text-white relative block">
       <svg id="blogIconSVG" class="w-4/6 h-4/6 inset-0 left-2 bottom-1 m-auto absolute" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -55,9 +55,9 @@
   </div>
 
 
-  <div id="innerOrbit" class="border-2 inset-0 absolute m-auto rounded-full"></div>
+  <!-- <div id="innerOrbit" class="border-2 inset-0 absolute m-auto rounded-full"></div>
   <div id="middleOrbit" class="border-2 inset-0 absolute m-auto rounded-full"></div>
-  <div id="outerOrbit" class="border-2 inset-0 absolute m-auto rounded-full"></div>
+  <div id="outerOrbit" class="border-2 inset-0 absolute m-auto rounded-full"></div> -->
   </div>
 
 </body>
@@ -89,19 +89,19 @@
 }
 
 #innerOrbit {
-  width: 302px;
-  height: 302px;
-  opacity: 3%;
+  width: 100px;
+  height: 100px;
+  opacity: 50%;
 }
 #middleOrbit {
-  width: 500px;
-  height: 500px;
-  opacity: 3%;
+  width: 300px;
+  height: 300px;
+  opacity: 50%;
 }
 #outerOrbit {
-  width: 800px;
-  height: 800px;
-  opacity: 3%;
+  width: 500px;
+  height: 500px;
+  opacity: 50%;
 }
 
 #middle {
@@ -164,8 +164,7 @@
   margin-right: auto;
   margin-top: auto;
   margin-bottom: auto;
-  box-shadow: 10px;
-  box-shadow: 0px 0px 40px 5px #eab308;
+  box-shadow: 0px 0px 30px 10px #eab308;
   /*   width: 100px; Need a specific value to work */
   /*   left: 10px; */
 }
@@ -273,10 +272,10 @@
 
 @keyframes OrbitOuter {
   from {
-    transform: rotate(0deg) translateY(-400px);
+    transform: rotate(0deg) translateY(-325px);
   }
   to {
-    transform: rotate(360deg) translateY(-400px);
+    transform: rotate(360deg) translateY(-325px);
   }
 }
 
