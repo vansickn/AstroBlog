@@ -11,12 +11,12 @@
 <!-- <body class="m-auto"> -->
 
 <!-- width div -->
-  <div class="w-full h-800 justify-center items-center gap-4 m-auto relative block"> 
+  <div id="main-area" class="w-full sm:h-800 justify-center items-center m-auto relative block"> 
 
 
     <img id="sun" src="/avatar.png" alt="avatar" class="w-48 m-auto bg-yellow-500 rounded-full">
     <a href="/about">
-        <div id="inner" class="bg-gradient-to-l from-blue-500 to-blue-300 h-20 w-20 rounded-full hidden sm:inline">
+        <div id="inner" class="bg-gradient-to-l from-blue-500 to-blue-300 h-14 w-14 rounded-full hidden sm:inline">
     
           <div class="bg-gradient-to-l from-gray-900 to-gray-700 w-5/6 h-5/6 rounded-full left-0 right-0 top-0 bottom-0 m-auto absolute"></div>
           <div id="aboutIcon" class="w-full h-full m-auto text-white relative block">
@@ -30,29 +30,32 @@
         </div>
     </a>
     
-    <div id="middle" class="bg-gradient-to-t from-yellow-700 to-yellow-300 h-24 w-24 rounded-full hidden sm:inline">
-      <div class="bg-gradient-to-t from-gray-900 to-gray-700 w-5/6 h-5/6 rounded-full left-0 right-0 top-0 bottom-0 m-auto absolute"></div>
-      <div id="workIcon" class="w-full h-full m-auto text-white relative block">
-        <svg id="workIconSVG" class="w-1/2 h-1/2 inset-0 m-auto absolute" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-        </svg>
-        <!-- workIcon -->
-      </div>
-      <!-- middle -->
-    </div>
+    <a href="/testing">
+        <div id="middle" class="bg-gradient-to-t from-yellow-700 to-yellow-300 h-16 w-16 rounded-full hidden sm:inline">
+          <div class="bg-gradient-to-t from-gray-900 to-gray-700 w-5/6 h-5/6 rounded-full left-0 right-0 top-0 bottom-0 m-auto absolute"></div>
+          <div id="workIcon" class="w-full h-full m-auto text-white relative block">
+            <svg id="workIconSVG" class="w-1/2 h-1/2 inset-0 m-auto absolute" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            <!-- workIcon -->
+          </div>
+          <!-- middle -->
+        </div>
+    </a>
 
-
-  <div id="outer" class="bg-gradient-to-b from-red-700 to-red-300 w-32 h-32 rounded-full hidden sm:inline">
-    <div class="bg-gradient-to-b from-gray-900 to-gray-700 w-5/6 h-5/6 rounded-full left-0 right-0 top-0 bottom-0 m-auto absolute"></div>
-    <div id="blogIcon" class="w-full h-full m-auto text-white relative block">
-      <svg id="blogIconSVG" class="w-4/6 h-4/6 inset-0 left-2 bottom-1 m-auto absolute" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5 3a1 1 0 000 2c5.523 0 10 4.477 10 10a1 1 0 102 0C17 8.373 11.627 3 5 3z"></path>
-        <path d="M4 9a1 1 0 011-1 7 7 0 017 7 1 1 0 11-2 0 5 5 0 00-5-5 1 1 0 01-1-1zM3 15a2 2 0 114 0 2 2 0 01-4 0z"></path>
-      </svg>
-      <!-- blogIcon -->
-    </div>
-    <!-- outer -->
-  </div>
+    <a href="/blog">
+        <div id="outer" class="bg-gradient-to-b from-red-700 to-red-300 w-20 h-20 rounded-full hidden sm:inline">
+          <div class="bg-gradient-to-b from-gray-900 to-gray-700 w-5/6 h-5/6 rounded-full left-0 right-0 top-0 bottom-0 m-auto absolute"></div>
+          <div id="blogIcon" class="w-full h-full m-auto text-white relative block">
+            <svg id="blogIconSVG" class="w-4/6 h-4/6 inset-0 left-2 bottom-1 m-auto absolute" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 3a1 1 0 000 2c5.523 0 10 4.477 10 10a1 1 0 102 0C17 8.373 11.627 3 5 3z"></path>
+              <path d="M4 9a1 1 0 011-1 7 7 0 017 7 1 1 0 11-2 0 5 5 0 00-5-5 1 1 0 01-1-1zM3 15a2 2 0 114 0 2 2 0 01-4 0z"></path>
+            </svg>
+            <!-- blogIcon -->
+          </div>
+          <!-- outer -->
+        </div>
+    </a>
 
 
   <!-- <div id="innerOrbit" class="border-2 inset-0 absolute m-auto rounded-full"></div>
@@ -243,12 +246,16 @@
   margin-bottom: auto;
 }
 
+#main-area {
+    animation: fadeIn 3s;
+}
+
 @keyframes OrbitInner {
   from {
-    transform: rotate(0deg) translateX(150px);
+    transform: rotate(0deg) translateX(140px);
   }
   to {
-    transform: rotate(360deg) translateX(150px);
+    transform: rotate(360deg) translateX(140px);
   }
 }
 
@@ -263,20 +270,31 @@
 
 @keyframes OrbitMiddle {
   from {
-    transform: rotate(0deg) translateY(250px);
+    transform: rotate(0deg) translateY(200px);
   }
   to {
-    transform: rotate(360deg) translateY(250px);
+    transform: rotate(360deg) translateY(200px);
   }
 }
 
 @keyframes OrbitOuter {
   from {
-    transform: rotate(0deg) translateY(-325px);
+    transform: rotate(0deg) translateY(-275px);
   }
   to {
-    transform: rotate(360deg) translateY(-325px);
+    transform: rotate(360deg) translateY(-275px);
   }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0%;
+        scale: 75%;
+    }
+    100%{
+        opacity: 100%;
+        scale: 100%;
+    }
 }
 
 

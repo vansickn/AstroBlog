@@ -29,29 +29,28 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 		<!-- <Header title={SITE_TITLE} /> -->
 		<main class="w-full h-screen">
 			<!-- class="w-full min-h-screen" -->
-			<!-- <div class="container flex flex-col">
-
-			</div> -->
-			<OrbitLinks></OrbitLinks>
-			<div class="container flex flex-col mb-24 m-auto">
-				<h1 id="heroText" class="
-				select-none
-				text-center
-				font-bold
-				text-transparent 
-				text-5xl
-				md:text-6xl
-				lg:text-8xl 
-				bg-clip-text 
-				bg-gradient-to-r 
-				from-blue-300 
-				to-blue-600
-				mb-0
-				">
-				Hey! I'm Noah
-				</h1>
-				<p id="subtext1" class="text-center text-lg md:text-xl m-0"> Click a Planet to Explore 👉🌎</p>
-				<p id="subtext2" class="text-center text-xs md:text-sm m-0"> (or scroll down) </p>
+			<div class="container flex flex-col 2xl:flex-row m-auto h-1/2 sm:h-5/6 sm:mt-10 items-center">
+				<OrbitLinks></OrbitLinks>
+				<div class="container flex flex-col -mt-10">
+					<h1 id="heroText" class="
+					select-none
+					text-center
+					font-bold
+					text-transparent 
+					text-4xl
+					md:text-6xl
+					lg:text-8xl 
+					bg-clip-text 
+					bg-gradient-to-r 
+					from-blue-300 
+					to-blue-600
+					mb-0
+					">
+					Hey! I'm Noah
+					</h1>
+					<p id="subtext1" class="text-center text-base md:text-xl m-0"> Click a Planet to Explore 👉🌎</p>
+					<p id="subtext2" class="text-center text-xs md:text-sm m-0"> (or scroll down) </p>
+				</div>
 			</div>
 			
 			<!-- <div class="w-full h-auto container flex flex-col justify-items-center">
@@ -81,6 +80,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 		animation: slideFromTopFade;
 		animation-duration: 800ms;
 		animation-timing-function: ease-in-out;
+		z-index: 5;
 	}
 	#subtext1 {
 		font-family: FuturaBold;
