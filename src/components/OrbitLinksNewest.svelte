@@ -30,7 +30,7 @@
         </div>
     </a>
     
-    <a href="/testing">
+    <a href="/projects">
         <div id="middle" class="bg-gradient-to-t from-yellow-700 to-yellow-300 h-16 w-16 rounded-full hidden sm:inline">
           <div class="bg-gradient-to-t from-gray-900 to-gray-700 w-5/6 h-5/6 rounded-full left-0 right-0 top-0 bottom-0 m-auto absolute"></div>
           <div id="workIcon" class="w-full h-full m-auto text-white relative block">
@@ -279,10 +279,10 @@
 
 @keyframes OrbitOuter {
   from {
-    transform: rotate(0deg) translateY(-275px);
+    transform: rotate(0deg) translateY(-260px);
   }
   to {
-    transform: rotate(360deg) translateY(-275px);
+    transform: rotate(360deg) translateY(-260px);
   }
 }
 
