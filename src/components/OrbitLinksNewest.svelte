@@ -8,7 +8,7 @@
 
 <svelte:window bind:innerWidth={screenWidth} bind:innerHeight={screenHeight}></svelte:window>
 
-<body class="m-auto">
+<!-- <body class="m-auto"> -->
 
 <!-- width div -->
   <div class="w-full h-800 justify-center items-center gap-4 m-auto relative block"> 
@@ -60,7 +60,7 @@
   <div id="outerOrbit" class="border-2 inset-0 absolute m-auto rounded-full"></div> -->
   </div>
 
-</body>
+<!-- </body> -->
 <style>
 
     #inner {
