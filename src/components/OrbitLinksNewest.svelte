@@ -247,7 +247,7 @@
 }
 
 #main-area {
-    animation: fadeIn 3s;
+    animation: fadeIn 2s;
 }
 
 @keyframes OrbitInner {
