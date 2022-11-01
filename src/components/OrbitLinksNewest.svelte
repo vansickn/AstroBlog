@@ -11,7 +11,7 @@
 <!-- <body class="m-auto"> -->
 
 <!-- width div -->
-  <div id="main-area" class="w-full sm:h-800 justify-center items-center m-auto relative block"> 
+  <div id="main-area" class="w-full sm:h-800 sm:scale-90 2xl:scale-110 justify-center items-center m-auto relative block"> 
 
 
     <img id="sun" src="/avatar.png" alt="avatar" class="w-48 m-auto bg-yellow-500 rounded-full">
