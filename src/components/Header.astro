@@ -15,30 +15,41 @@ import { SITE_TITLE } from '../config';
 		{SITE_TITLE}
 	</h2> -->
 	<div class="container flex-row m-auto hidden sm:flex w-800 pt-8 items-center gap-10 justify-start">
-		<img id="sun" src="/avatar.png" alt="avatar" class="w-16 bg-yellow-500 rounded-full shadow-lg shadow-yellow-700">
+		<a href="/" class="w-60">
+			<img id="sun" src="/avatar.png" alt="avatar" class="bg-yellow-300 shadow-lg rounded-full hover:scale-125 transition duration-500">
+		</a>
 		<div class="container flex flex-row gap-4">
 			<div id="aboutContainer" class=" bg-gradient-to-l from-blue-500 to-blue-300 text-white rounded-full p-0.5 cursor-pointer">
-				<div class="container bg-gradient-to-l from-gray-900 to-gray-800 rounded-full p-2 pt-1 pb-1 ">About Me</div>
+				<div class="container bg-gradient-to-l from-gray-900 to-gray-800 hover:from-blue-500 hover:to-blue-300 hover:text-gray-900 rounded-full p-4 pt-1 pb-1 ">About Me</div>
 			</div>
 			<div id="projectsContainer" class=" bg-gradient-to-l from-yellow-700 to-yellow-300 text-white rounded-full p-0.5 cursor-pointer">
-				<div class="container bg-gradient-to-l from-gray-900 to-gray-800 rounded-full p-2 pt-1 pb-1">Projects</div>
+				<div class="container bg-gradient-to-l from-gray-900 to-gray-800 hover:from-yellow-700 hover:to-yellow-300 hover:text-gray-900 rounded-full p-4 pt-1 pb-1">Projects</div>
 			</div>
-			<div id="blogContainer" class=" bg-gradient-to-l from-red-700 to-red-300 text-white rounded-full p-0.5 cursor-pointer">
-				<div class="container bg-gradient-to-l from-gray-900 to-gray-800 rounded-full p-2 pt-1 pb-1">Blog</div>
+			<div id="blogContainer" class=" bg-gradient-to-l from-red-600 to-red-300 text-white rounded-full p-0.5 cursor-pointer">
+				<div class="container bg-gradient-to-l from-gray-900 to-gray-800 hover:from-red-600 hover:to-red-300 hover:text-gray-900 rounded-full p-4 pt-1 pb-1">Blog</div>
 			</div>
 		</div>
-		<div class="container flex flex-row gap-4">
+		<div class="container flex flex-row gap-4 justify-end">
 			<a href="https://github.com/vansickn">
 				<svg class="sm:w-6 sm:h-6 w-4 h-4 inline mb-1 text-blue-300" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 22.0268V19.1568C16.0375 18.68 15.9731 18.2006 15.811 17.7506C15.6489 17.3006 15.3929 16.8902 15.06 16.5468C18.2 16.1968 21.5 15.0068 21.5 9.54679C21.4997 8.15062 20.9627 6.80799 20 5.79679C20.4558 4.5753 20.4236 3.22514 19.91 2.02679C19.91 2.02679 18.73 1.67679 16 3.50679C13.708 2.88561 11.292 2.88561 8.99999 3.50679C6.26999 1.67679 5.08999 2.02679 5.08999 2.02679C4.57636 3.22514 4.54413 4.5753 4.99999 5.79679C4.03011 6.81549 3.49251 8.17026 3.49999 9.57679C3.49999 14.9968 6.79998 16.1868 9.93998 16.5768C9.61098 16.9168 9.35725 17.3222 9.19529 17.7667C9.03334 18.2112 8.96679 18.6849 8.99999 19.1568V22.0268" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 20.0267C6 20.9999 3.5 20.0267 2 17.0267" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+			</a>
+			<a href="https://www.linkedin.com/in/noah-vansickle-b68131191/">
+				 <svg class="sm:w-6 sm:h-6 w-4 h-4 inline mb-1 text-blue-300" width="100%" height="100%" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 17V13.5V10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 17V13.75M11 10V13.75M11 13.75C11 10 17 10 17 13.75V17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 7.01L7.01 6.99889" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 			</a>
 		</div>
 	</div> 
 </header>
 <style>
-	header {
-		margin: 0em 0 2em;
+	@font-face {
+		font-family: FuturaBold;
+		src: url('FuturaHeavyfont.ttf');
 	}
-	h2 {
-		margin: 0.5em 0;
+
+	header {
+		font-family: FuturaBold;
+	}
+
+	#sun {
+		box-shadow: 0px 0px 30px 10px #eab308;
 	}
 </style>

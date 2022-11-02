@@ -32,6 +32,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 		</style>
 
 	</head>
+	<Header></Header>
 	<body id="home" class="prose
 		prose-invert
 		bg-gradient-to-b
@@ -51,7 +52,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 		from-red-300 
 		to-red-600
 		pb-5
-		mt-20
+		mt-10
 		">
 		Posts
 		</h1>
