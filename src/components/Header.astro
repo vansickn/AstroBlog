@@ -1,19 +1,38 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../config';
+
 ---
 
+<script>
+	document.getElementById("aboutContainer")?.addEventListener("click", function () {window.location.href = '/about'});
+	document.getElementById("projectsContainer")?.addEventListener("click", function () {window.location.href = '/projects'});
+		document.getElementById("blogContainer")?.addEventListener("click", function () {window.location.href = '/blog'});
+</script>
+
 <header>
-	<h2>
+	<!-- <h2>
 		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<!-- <HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink> -->
-	</nav>
+	</h2> -->
+	<div class="container flex-row m-auto hidden sm:flex w-800 pt-8 items-center gap-10 justify-start">
+		<img id="sun" src="/avatar.png" alt="avatar" class="w-16 bg-yellow-500 rounded-full shadow-lg shadow-yellow-700">
+		<div class="container flex flex-row gap-4">
+			<div id="aboutContainer" class=" bg-gradient-to-l from-blue-500 to-blue-300 text-white rounded-full p-0.5 cursor-pointer">
+				<div class="container bg-gradient-to-l from-gray-900 to-gray-800 rounded-full p-2 pt-1 pb-1 ">About Me</div>
+			</div>
+			<div id="projectsContainer" class=" bg-gradient-to-l from-yellow-700 to-yellow-300 text-white rounded-full p-0.5 cursor-pointer">
+				<div class="container bg-gradient-to-l from-gray-900 to-gray-800 rounded-full p-2 pt-1 pb-1">Projects</div>
+			</div>
+			<div id="blogContainer" class=" bg-gradient-to-l from-red-700 to-red-300 text-white rounded-full p-0.5 cursor-pointer">
+				<div class="container bg-gradient-to-l from-gray-900 to-gray-800 rounded-full p-2 pt-1 pb-1">Blog</div>
+			</div>
+		</div>
+		<div class="container flex flex-row gap-4">
+			<a href="https://github.com/vansickn">
+				<svg class="sm:w-6 sm:h-6 w-4 h-4 inline mb-1 text-blue-300" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 22.0268V19.1568C16.0375 18.68 15.9731 18.2006 15.811 17.7506C15.6489 17.3006 15.3929 16.8902 15.06 16.5468C18.2 16.1968 21.5 15.0068 21.5 9.54679C21.4997 8.15062 20.9627 6.80799 20 5.79679C20.4558 4.5753 20.4236 3.22514 19.91 2.02679C19.91 2.02679 18.73 1.67679 16 3.50679C13.708 2.88561 11.292 2.88561 8.99999 3.50679C6.26999 1.67679 5.08999 2.02679 5.08999 2.02679C4.57636 3.22514 4.54413 4.5753 4.99999 5.79679C4.03011 6.81549 3.49251 8.17026 3.49999 9.57679C3.49999 14.9968 6.79998 16.1868 9.93998 16.5768C9.61098 16.9168 9.35725 17.3222 9.19529 17.7667C9.03334 18.2112 8.96679 18.6849 8.99999 19.1568V22.0268" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 20.0267C6 20.9999 3.5 20.0267 2 17.0267" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+			</a>
+		</div>
+	</div> 
 </header>
 <style>
 	header {
